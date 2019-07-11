@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ProductList from "./ProductList";
 import ShoppingCart from "./ShoppingCart";
-import axios from "axios";
 import styled from "styled-components";
 
 const Box = styled.div`
@@ -23,9 +22,16 @@ function App() {
     const initalSelected =
       localStorage.getItem("right") &&
       JSON.parse(localStorage.getItem("right") || "");
-    axios
-      .get("/oa/cart")
-      .then(data => setData(initalData ? initalData : data.data));
+    setData(
+      initalData
+        ? initalData
+        : [
+            { id: "1", name: "商品1", describe: "描述1", stock: 10 },
+            { id: "2", name: "商品2", describe: "描述2", stock: 20 },
+            { id: "3", name: "商品3", describe: "描述3", stock: 0 },
+            { id: "4", name: "商品4", describe: "描述4", stock: 60 }
+          ]
+    );
     setSelected(initalSelected);
   }, []);
 
