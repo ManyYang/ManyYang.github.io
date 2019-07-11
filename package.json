@@ -1,6 +1,7 @@
 {
   "name": "react-car",
   "version": "0.1.0",
+  "homepage": "https://manyyang.github.io/",
   "private": true,
   "dependencies": {
     "@sinoui/data-table": "^0.1.22",
@@ -12,6 +13,7 @@
     "axios": "^0.19.0",
     "concat-files": "^0.1.1",
     "connect-multiparty": "^2.2.0",
+    "gh-pages": "^2.0.1",
     "md5-file": "^4.0.0",
     "ramda": "^0.26.1",
     "react": "^16.8.6",
@@ -26,7 +28,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
