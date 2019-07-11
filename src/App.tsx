@@ -24,7 +24,7 @@ function App() {
       localStorage.getItem("right") &&
       JSON.parse(localStorage.getItem("right") || "");
     axios
-      .get("/oa/cart")
+      .get("https://manyyang.github.io/oa/cart")
       .then(data => setData(initalData ? initalData : data.data));
     setSelected(initalSelected);
   }, []);
