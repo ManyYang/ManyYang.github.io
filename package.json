@@ -1,7 +1,7 @@
 {
   "name": "react-car",
   "version": "0.1.0",
-  "homepage": "https://manyyang.github.io/cart/",
+  "homepage": "https://manyyang.github.io/",
   "private": true,
   "devDependencies": {
     "gh-pages": "^2.0.1",

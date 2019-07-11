@@ -48,7 +48,7 @@ const mergeFiles = async (filePath, chunks) => {
   await util.promisify(concatFiles)(chunks, filePath);
 };
 
-app.get("https://manyyang.github.io/oa/cart", (req, res) => {
+app.get("/oa/cart", (req, res) => {
   res.json([
     { id: "1", name: "商品1", describe: "描述1", stock: 10 },
     { id: "2", name: "商品2", describe: "描述2", stock: 20 },
